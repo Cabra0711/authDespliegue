@@ -53,7 +53,7 @@ jobs:
       - name: Deploy to VPS
         uses: appleboy/ssh-action@v0.1.9
         with:
-          host: 204.168.214.142
+          host: 161.97.136.42
           username: root
           key: ${{ secrets.SSH_KEY }}
           port: 22
@@ -74,5 +74,5 @@ jobs:
             docker rm $CONTAINER_NAME || true
 
             docker run -d --name $CONTAINER_NAME \
-                         -p 8080:8080 \
+                         -p 8084:8080 \
                          ghcr.io/$REPO_LOWER:latest
