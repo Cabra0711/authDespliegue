@@ -1,0 +1,123 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="row w-100 justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            
+            <div class="card p-4 bg-white border-0 rounded-3 shadow-sm" id="loginCard">
+                <div class="card-body">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold text-dark mb-1">Iniciar sesión</h2>
+                        <p class="text-muted small">Ingresa tus credenciales para acceder</p>
+                    </div>
+                    
+                    <form id="loginForm" class="needs-validation" novalidate>
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label text-secondary small fw-semibold">Correo electrónico</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light text-muted border-end-0"><i class="bi bi-envelope"></i></span>
+                                <input type="email" class="form-control bg-light border-start-0" id="loginEmail" required placeholder="nombre@correo.com">
+                            </div>
+                        </div>
+                        
+                        <!-- Password -->
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label text-secondary small fw-semibold">Contraseña</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light text-muted border-end-0"><i class="bi bi-lock"></i></span>
+                                <input type="password" class="form-control bg-light border-start-0" id="loginPassword" required placeholder="••••••••">
+                            </div>
+                        </div>
+                        
+                        <!-- Recordarme -->
+                        <div class="mb-3 form-check small">
+                            <input type="checkbox" class="form-check-input" id="remember">
+                            <label class="form-check-label text-muted" for="remember">Recordarme en este dispositivo</label>
+                        </div>
+                        
+                        <!-- Botón Entrar -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary py-2 fw-semibold shadow-sm">Entrar</button>
+                        </div>
+                        
+                        <!-- Enlace a Registro -->
+                        <div class="text-center mt-4">
+                            <span class="text-muted small">¿No tienes cuenta? </span>
+                            <a href="#" id="btnIrARegistro" class="text-decoration-none small fw-semibold text-primary">Regístrate</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="card p-4 bg-white border-0 rounded-3 shadow-sm d-none" id="registerCard">
+                <div class="card-body">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold text-dark mb-1">Crear cuenta</h2>
+                        <p class="text-muted small">Regístrate para comenzar a usar la plataforma</p>
+                    </div>
+
+                    <form action="#" method="POST" class="needs-validation" novalidate id="registerForm">
+                        <!-- Nombre Completo -->
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label text-secondary small fw-semibold">Nombre Completo</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light text-muted border-end-0"><i class="bi bi-person"></i></span>
+                                <input type="text" class="form-control bg-light border-start-0" id="fullName" name="fullName" placeholder="Juan Pérez" required>
+                                <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                            </div>
+                        </div>
+
+                        <!-- Correo Electrónico -->
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label text-secondary small fw-semibold">Correo Electrónico</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light text-muted border-end-0"><i class="bi bi-envelope"></i></span>
+                                <input type="email" class="form-control bg-light border-start-0" id="registerEmail" name="email" placeholder="nombre@correo.com" required>
+                                <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+                            </div>
+                        </div>
+
+                        <!-- Contraseña -->
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label text-secondary small fw-semibold">Contraseña</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light text-muted border-end-0"><i class="bi bi-lock"></i></span>
+                                <input type="password" class="form-control bg-light border-start-0" id="registerPassword" name="password" placeholder="••••••••" required>
+                                <div class="invalid-feedback">La contraseña es obligatoria.</div>
+                            </div>
+                        </div>
+
+                        <!-- Confirmar Contraseña -->
+                        <div class="mb-4">
+                            <label for="confirmPassword" class="form-label text-secondary small fw-semibold">Confirmar Contraseña</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light text-muted border-end-0"><i class="bi bi-shield-lock"></i></span>
+                                <input type="password" class="form-control bg-light border-start-0" id="confirmPassword" name="confirmPassword" placeholder="••••••••" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Términos y Condiciones -->
+                        <div class="form-check mb-4 small">
+                            <input class="form-check-input" type="checkbox" value="" id="terms" required>
+                            <label class="form-check-label text-muted ms-1" for="terms">
+                                Acepto los <a href="#" class="text-decoration-none text-primary fw-medium">Términos de Servicio</a>
+                            </label>
+                        </div>
+
+                        <!-- Botón de Registro -->
+                        <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold shadow-sm mb-3">
+                            Registrarse
+                        </button>
+                    </form>
+
+                    <!-- Enlace para volver al Login -->
+                    <div class="text-center mt-3">
+                        <span class="text-muted small">¿Ya tienes una cuenta? </span>
+                        <a href="#" id="linkLogin" class="text-decoration-none small fw-semibold text-primary">Inicia sesión</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
